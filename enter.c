@@ -1,28 +1,27 @@
 /*
 Student Name:Bishal Rai
-Subject:Programming Fundamental
+Subject:Programming fundamental
 Roll no:13
-Lab Sheet no:17
-Program:A program to enter 4 digit number and 
-                   1-display the result by dividind the number by 10
-                   2-divide it by another number asked from user
-                   3-display the remainder by dividing number by 10
-Date:/01/2017
+Lab Sheet no:18
+Program:To enter any number and print its reverse
+Date:13/01/2017
 */
 #include<stdio.h>
+#include<conio.h>
 int main()
 {
-	int a,div,b,di,d;
-	printf("Enter a four digit number:");
-	scanf("%d",&a);
-	div=a/10;
-	printf("The dividend is :%d\n",div);
-	printf("Enter the second number:");
-	scanf("%d",&b);
-	di=div/b;
-	printf("The devidend is :%d\n",di);
-	d=di%10;
-	printf("The remainder is :%d",d);
-	return(0);
-}	
-	
+    int n,r,rev=0;
+    printf("Enter any number:");
+    scanf("%d",&n);
+    while(n>0)
+    {
+      r=n%10;
+      rev=(rev*10)+r;
+      n=n/10;
+
+    }
+    printf("%d",rev);
+    return(0);
+    getch();
+
+}
